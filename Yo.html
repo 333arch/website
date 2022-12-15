@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="stylesheet.css" rel=stylesheet>
+    <title> Arch's Website </title>
+    <script>
+        function myFunction(){
+        var x = document.getElementById("form1");
+        var text = "";
+        var i;
+        for(i = 0; i< x.length; i++){
+            data = x.elements[i].value;
+
+            if (data != 'Submit'){
+                text += "The name entered is" + data + ".";
+            }
+        }
+        window.alert(data + ", please click to continue!")
+        document.getElementById("output_text").innerHTML = text;
+    }
+    </script>
+</head>
+<body>
+    <body style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e3/Kheops-Pyramid.jpg');"></body>
+    <h1>The great pryamid of geezers</h1>
+    <h2>Full of geezers</h2>
+    <p>Everyone rates geezers</p>
+    <img src="https://sheworedotnet.files.wordpress.com/2015/12/csmmo-zxiaind5a.jpg"  alt="yeh" width="460" height="345">
+    <ul>
+        <li>Geezers wear stone island</li>
+        <li>Geezers go spoons on Tuesdays</li>
+        <li>'The RAF from England shot one down'</li>
+    </ul>
+    <h2>Join the geezer army today!</h2>
+    <form id="form1" action="">
+        <label for ="firstname">Firstname:</label>
+        <input type="text" id="firstname" name="firstname">
+    </form>
+
+    <button onclick="myFunction()" name="Submit" id = "Submit">Submit</button>
+    <p id = "output_text"> </p>
+</body>
+</html>
+
